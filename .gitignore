@@ -4,8 +4,8 @@
 /node_modules
 /.pnp
 .pnp.js
-.yarn/install-state.gz
-
+.vscode
+.idea
 # testing
 /coverage
 
@@ -26,7 +26,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # local env files
-.env*.local
+.env.local
 
 # vercel
 .vercel
@@ -34,3 +34,19 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+#webStorm
+.idea
+/.idea/
+/.idea/
+
+# pwa
+**/public/precache.*.*.js
+**/public/sw.js
+**/public/workbox-*.js
+**/public/worker-*.js
+**/public/fallback-*.js
+**/public/precache.*.*.js.map
+**/public/sw.js.map
+**/public/workbox-*.js.map
+**/public/worker-*.js.map
