@@ -3,14 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "eslint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "eslint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+    "stylelint": "stylelint '**/*.styled.ts'",
+    "stylelint:fix": "stylelint '**/*.styled.ts' --fix",
+    "prettier": "prettier src --check",
+    "prettier:fix": "prettier src --write",
+    "lint": "npm run prettier && npm run eslint && npm run stylelint"
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^7.7.0",
     "eslint-plugin-react": "^7.34.1",
+    "husky": "^9.0.11",
     "next": "14.2.1",
     "react": "^18",
     "react-dom": "^18"
