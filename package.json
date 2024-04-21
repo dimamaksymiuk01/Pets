@@ -8,12 +8,10 @@
     "start": "next start",
     "eslint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "eslint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
-    "stylelint": "stylelint '**/*.styled.ts'",
-    "stylelint:fix": "stylelint '**/*.styled.ts' --fix",
     "prettier": "prettier src --check",
     "prettier:fix": "prettier src --write",
-    "prepare": "husky install",
-    "lint": "npm run prettier && npm run eslint && npm run stylelint"
+    "prepare": "husky",
+    "lint": "npm run prettier && npm run eslint"
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^7.7.0",
@@ -27,7 +25,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "eslint": "^8.56.0",
+    "eslint": "^8.57.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "prettier": "^3.2.5",
     "typescript": "^5"
