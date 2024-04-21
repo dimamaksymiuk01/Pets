@@ -12,6 +12,7 @@
     "stylelint:fix": "stylelint '**/*.styled.ts' --fix",
     "prettier": "prettier src --check",
     "prettier:fix": "prettier src --write",
+    "prepare": "husky install",
     "lint": "npm run prettier && npm run eslint && npm run stylelint"
   },
   "dependencies": {
