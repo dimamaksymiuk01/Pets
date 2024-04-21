@@ -73,7 +73,18 @@ export default function Home() {
           <h2>
             Templates <span>-&gt;</span>
           </h2>
-          <p>Explore starter templates for Next.js.</p>
+
+
+
+
+
+          <
+
+
+
+
+
+             p      >Explore starter templates for Next.js.</p>
         </a>
 
         <a
@@ -82,9 +93,9 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <h2>
+          <                h2>
             Deploy <span>-&gt;</span>
-          </h2>
+          </h2 >
           <p>
             Instantly deploy your Next.js site to a shareable URL with Vercel.
           </p>
