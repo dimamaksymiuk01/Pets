@@ -12,6 +12,7 @@
     "prettier:fix": "prettier src --write",
     "prepare": "husky",
     "lint": "npm run prettier && npm run eslint",
+    "lint:fix": "npm run eslint:fix && npm run prettier:fix",
     "test": "jest"
   },
   "dependencies": {
@@ -25,6 +26,7 @@
   "devDependencies": {
     "@testing-library/jest-dom": "^6.4.2",
     "@testing-library/react": "^15.0.2",
+    "@types/jest": "^29.5.12",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
