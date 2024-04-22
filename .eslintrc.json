@@ -29,7 +29,9 @@
     "project": "./tsconfig.json"
   },
   "plugins": [
-    "react", "react-hooks", "@typescript-eslint"
+    "react",
+    "react-hooks",
+    "@typescript-eslint"
   ],
   "rules": {
     "no-console": "warn",
