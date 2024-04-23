@@ -7,3 +7,4 @@ export const metadata: Metadata = {
 const Home = () => {
   return <ThemeSwitch />;
 };
+export default Home;
