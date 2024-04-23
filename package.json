@@ -16,12 +16,17 @@
     "test": "jest"
   },
   "dependencies": {
+    "@types/antd": "^1.0.0",
+    "@types/styled-components": "^5.1.34",
     "@typescript-eslint/eslint-plugin": "^7.7.0",
+    "antd": "^5.16.4",
     "eslint-plugin-react": "^7.34.1",
     "husky": "^9.0.11",
     "next": "14.2.1",
+    "normalize.css": "^8.0.1",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "styled-components": "^6.1.8"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.4.2",
