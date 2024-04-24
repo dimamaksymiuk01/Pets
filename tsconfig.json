@@ -20,14 +20,8 @@
     "jsx": "preserve",
     "incremental": true,
     "paths": {
-      "common/api/*": [
-        "common/api/*"
-      ],
       "@/*": [
         "./src/*"
-      ],
-      "common/assets/*": [
-        "common/assets/*"
       ],
       "common/components/*": [
         "common/components/*"
@@ -46,9 +40,6 @@
       ],
       "common/styles/*": [
         "common/styles/*"
-      ],
-      "common/utils/*": [
-        "common/utils/*"
       ],
       "common/types/*": [
         "common/types/*"
