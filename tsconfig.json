@@ -19,10 +19,12 @@
     "noImplicitAny": true,
     "jsx": "preserve",
     "incremental": true,
-    "baseUrl": "src",
     "paths": {
       "common/api/*": [
         "common/api/*"
+      ],
+      "@/*": [
+        "./src/*"
       ],
       "common/assets/*": [
         "common/assets/*"

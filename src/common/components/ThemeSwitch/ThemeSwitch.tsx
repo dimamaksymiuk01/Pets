@@ -3,7 +3,7 @@
 import { ThemeProvider } from 'styled-components';
 import { useState } from 'react';
 import { Switch } from 'antd';
-import { darkTheme, lightTheme, StyledApp } from 'common/components/ThemeSwitch.styled';
+import { darkTheme, lightTheme, StyledApp } from './ThemeSwitch.styled';
 
 export default function ThemeSwitch() {
   const [theme, setTheme] = useState('dark');
