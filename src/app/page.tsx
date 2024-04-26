@@ -1,18 +1,17 @@
 import { Metadata } from 'next';
 import ThemeSwitch from '@/common/components/ThemeSwitch/ThemeSwitch';
-import RootLayout from '@/app/layout';
+import Test from '@/common/components/Block';
 
 export const metadata: Metadata = {
   title: 'PETS | HONE',
   description: 'PETS',
 };
 
-const Home = () => {
-  return (
-    <RootLayout>
-      <ThemeSwitch />
-    </RootLayout>
-  );
-};
+const Home = () => (
+  <div>
+    <ThemeSwitch />
+    <Test />
+  </div>
+);
 
 export default Home;

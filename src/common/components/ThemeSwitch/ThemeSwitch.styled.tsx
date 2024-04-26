@@ -11,13 +11,13 @@ interface IThemeProps {
 export const darkTheme: DefaultTheme = {
   body: '#1c1c1c',
   title: '#b6b6b6',
-  subtitle: '#b6b6b6',
+  subtitle: 'red',
 };
 
 export const lightTheme: DefaultTheme = {
   body: '#fff',
   title: '#1c1c1c',
-  subtitle: '#b6b6b6',
+  subtitle: 'green',
 };
 
 export const StyledApp = styled.div<IThemeProps>`
