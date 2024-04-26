@@ -16,8 +16,9 @@ const themeSlice = createSlice({
       state.currentTheme = action.payload;
       console.log('свічнули тему', action);
     },
+    getTheme: (state) => state,
   },
 });
 
-export const { setTheme } = themeSlice.actions;
+export const { setTheme, getTheme } = themeSlice.actions;
 export default themeSlice.reducer;

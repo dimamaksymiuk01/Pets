@@ -1,10 +1,10 @@
 'use client';
 
-import { ThemeProvider } from 'styled-components';
-import { Switch } from 'antd';
-import { darkTheme, lightTheme, StyledApp } from './ThemeSwitch.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { setTheme, ThemeState } from '@/store/themeSlice';
+import { darkTheme, lightTheme, Name } from './ThemeSwitch.styled';
+import { ThemeProvider } from 'styled-components';
+import { Switch } from 'antd';
 
 export default function ThemeSwitch() {
   const dispatch = useDispatch();
@@ -14,12 +14,13 @@ export default function ThemeSwitch() {
     dispatch(setTheme(currentTheme === 'dark' ? 'light' : 'dark'));
   };
 
+  const theme = currentTheme === 'dark' ? darkTheme : lightTheme;
+
   return (
     <>
-      <ThemeProvider theme={currentTheme === 'dark' ? darkTheme : lightTheme}>
-        <StyledApp>
-          <Switch defaultChecked={currentTheme === 'dark'} onChange={toggleTheme} />
-        </StyledApp>
+      <ThemeProvider theme={theme}>
+        <Switch defaultChecked={currentTheme === 'dark'} onChange={toggleTheme} />
+        <Name>Lox</Name>
       </ThemeProvider>
     </>
   );

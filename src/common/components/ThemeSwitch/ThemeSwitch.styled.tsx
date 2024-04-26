@@ -7,11 +7,13 @@ interface IThemeProps {
   title?: string;
   subtitle?: string;
 }
+
 export const darkTheme: DefaultTheme = {
   body: '#1c1c1c',
-  title: '#fff',
+  title: '#b6b6b6',
   subtitle: '#b6b6b6',
 };
+
 export const lightTheme: DefaultTheme = {
   body: '#fff',
   title: '#1c1c1c',
@@ -21,15 +23,15 @@ export const lightTheme: DefaultTheme = {
 export const StyledApp = styled.div<IThemeProps>`
   min-height: 100vh;
   text-align: center;
-  background-color: ${(props) => props.theme.body};
+  background-color: ${({ theme }) => theme.body};
 `;
 
 export const Name = styled.h1`
   margin: 1rem;
-  color: ${(props) => props.theme.subtitle};
+  color: ${({ theme }) => theme.title};
 `;
 
 export const Info = styled.p`
   margin: 1rem;
-  color: ${(props) => props.theme.subtitle};
+  color: ${({ theme }) => theme.subtitle};
 `;
