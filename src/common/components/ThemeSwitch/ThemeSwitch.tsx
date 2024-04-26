@@ -5,6 +5,7 @@ import { setTheme, ThemeState } from '@/store/themeSlice';
 import { darkTheme, lightTheme, Name } from './ThemeSwitch.styled';
 import { ThemeProvider } from 'styled-components';
 import { Switch } from 'antd';
+import Test from '@/common/components/Block';
 
 export default function ThemeSwitch() {
   const dispatch = useDispatch();
@@ -21,6 +22,7 @@ export default function ThemeSwitch() {
       <ThemeProvider theme={theme}>
         <Switch defaultChecked={currentTheme === 'dark'} onChange={toggleTheme} />
         <Name>Lox</Name>
+        <Test />
       </ThemeProvider>
     </>
   );

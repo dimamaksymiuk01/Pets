@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
-import { StyledApp, Name } from '@/common/components/ThemeSwitch/ThemeSwitch.styled';
 import ThemeSwitch from '@/common/components/ThemeSwitch/ThemeSwitch';
+import RootLayout from '@/app/layout';
 
 export const metadata: Metadata = {
   title: 'PETS | HONE',
@@ -9,10 +9,9 @@ export const metadata: Metadata = {
 
 const Home = () => {
   return (
-    <StyledApp>
+    <RootLayout>
       <ThemeSwitch />
-      <Name>Dima</Name>
-    </StyledApp>
+    </RootLayout>
   );
 };
 
