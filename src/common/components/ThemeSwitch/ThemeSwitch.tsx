@@ -1,22 +1,24 @@
 'use client';
 
 import { ThemeProvider } from 'styled-components';
-import { useState } from 'react';
 import { Switch } from 'antd';
 import { darkTheme, lightTheme, StyledApp } from './ThemeSwitch.styled';
+import { useDispatch, useSelector } from 'react-redux';
+import { setTheme, ThemeState } from '@/store/themeSlice';
 
 export default function ThemeSwitch() {
-  const [theme, setTheme] = useState('dark');
-  const isDarkTheme = theme === 'dark';
+  const dispatch = useDispatch();
+  const { currentTheme } = useSelector((state: { theme: ThemeState }) => state.theme);
 
-  const togleTheme = () => {
-    setTheme(isDarkTheme ? 'light' : 'dark');
+  const toggleTheme = () => {
+    dispatch(setTheme(currentTheme === 'dark' ? 'light' : 'dark'));
   };
+
   return (
     <>
-      <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
+      <ThemeProvider theme={currentTheme === 'dark' ? darkTheme : lightTheme}>
         <StyledApp>
-          <Switch defaultChecked onChange={togleTheme} />
+          <Switch defaultChecked={currentTheme === 'dark'} onChange={toggleTheme} />
         </StyledApp>
       </ThemeProvider>
     </>
