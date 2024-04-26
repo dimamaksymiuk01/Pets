@@ -2,7 +2,6 @@
 
 import { useDispatch, useSelector } from 'react-redux';
 import { setTheme, ThemeState } from '@/store/themeSlice';
-import { Name } from './ThemeSwitch.styled';
 import { Switch } from 'antd';
 
 export default function ThemeSwitch() {
@@ -15,7 +14,6 @@ export default function ThemeSwitch() {
   return (
     <>
       <Switch defaultChecked={currentTheme === 'dark'} onChange={toggleTheme} />
-      <Name>Lox</Name>
     </>
   );
 }

@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import ThemeSwitch from '@/common/components/ThemeSwitch/ThemeSwitch';
-import Test from '@/common/components/Block';
+import { Wrapper } from '@/common/components';
 
 export const metadata: Metadata = {
   title: 'PETS | HONE',
@@ -8,10 +8,9 @@ export const metadata: Metadata = {
 };
 
 const Home = () => (
-  <div>
+  <Wrapper>
     <ThemeSwitch />
-    <Test />
-  </div>
+  </Wrapper>
 );
 
 export default Home;
