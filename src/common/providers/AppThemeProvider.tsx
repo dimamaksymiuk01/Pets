@@ -9,7 +9,7 @@ import { GlobalStyle } from '@/common/styles/GlobalStyle';
 
 export const AppThemeProvider: FC<PropsWithChildren> = ({ children }) => {
   const { currentTheme } = useSelector((state: { theme: ThemeState }) => state.theme);
-  const theme = currentTheme === 'dark' ? darkTheme : lightTheme;
+  const theme = currentTheme === 'light' ? darkTheme : lightTheme;
 
   return (
     <ThemeProvider theme={theme}>

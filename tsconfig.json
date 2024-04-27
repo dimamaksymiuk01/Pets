@@ -18,14 +18,11 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "paths": {
-      "@/*": [
-        "./src/*"
-      ],
-      "@/fonts": [
-        "./src/common/styles/fonts"
-      ]
-    },
+"paths": {
+  "@/*": ["./src/*"],
+  "@/fonts": ["./src/common/styles/fonts"],
+  "@/public/*": ["./public/*"]
+},
     "plugins": [
       {
         "name": "next"
@@ -37,6 +34,7 @@
     "next-auth.d.ts",
     "**/*.ts",
     "**/*.tsx",
+    "svgr.d.ts",
     ".next/types/**/*.ts"
   ],
   "exclude": [

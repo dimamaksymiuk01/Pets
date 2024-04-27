@@ -1,3 +1,5 @@
+'use client';
+
 import { DefaultTheme } from 'styled-components';
 import { colors } from '@/common/styles/index';
 import { createGlobalStyle } from 'styled-components';
@@ -7,14 +9,19 @@ interface GlobalStyleProps {
 }
 export const darkTheme: DefaultTheme = {
   body: colors.black,
+  text100: colors.white,
+  text200: colors.gray,
 };
 
 export const lightTheme: DefaultTheme = {
   body: colors.white100,
+  text100: colors.black,
+  text200: colors.gray,
 };
 
 export const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
   body {
     background-color: ${({ theme }) => theme.body};
+    color: ${({ theme }) => theme.text100};
   }
 `;

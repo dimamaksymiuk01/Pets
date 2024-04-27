@@ -1,11 +1,10 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-
+import { Jost } from 'next/font/google';
 import { RootProvider } from '@/common/providers';
 import '@/common/styles/normalize.css';
 import { Wrapper } from '@/common/components';
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Jost({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Pets',
