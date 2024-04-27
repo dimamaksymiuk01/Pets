@@ -1,16 +1,19 @@
 import { Metadata } from 'next';
-import ThemeSwitch from '@/common/components/ThemeSwitch/ThemeSwitch';
-import { Wrapper } from '@/common/components';
+import { Header } from '@/modules/Header/Header';
+import { HomeContent } from '@/modules/HomeContent/HomeContent';
 
 export const metadata: Metadata = {
-  title: 'PETS | HONE',
+  title: 'PETS | HOME',
   description: 'PETS',
 };
 
-const Home = () => (
-  <Wrapper>
-    <ThemeSwitch />
-  </Wrapper>
-);
+const Home = () => {
+  return (
+    <>
+      <Header />
+      <HomeContent />
+    </>
+  );
+};
 
 export default Home;
