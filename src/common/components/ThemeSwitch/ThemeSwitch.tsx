@@ -2,23 +2,28 @@
 
 import { useDispatch, useSelector } from 'react-redux';
 import { setTheme, ThemeState } from '@/store/themeSlice';
-import { Switch } from 'antd';
-import OpenEye from '@/public/icons/openEye.svg';
-import ClosedEye from '@/public/icons/closedEye.svg';
-import { ThemeSwitchContainer } from '@/common/components/ThemeSwitch/ThemeSwitch.styled';
+import {
+  Slider,
+  SwitchContainer,
+  ThemeSwitchContainer,
+} from '@/common/components/ThemeSwitch/ThemeSwitch.styled';
+import { THEME } from '@/common/constans/themes';
 
 export default function ThemeSwitch() {
   const dispatch = useDispatch();
   const { currentTheme } = useSelector((state: { theme: ThemeState }) => state.theme);
   const toggleTheme = () => {
-    dispatch(setTheme(currentTheme === 'dark' ? 'light' : 'dark'));
+    dispatch(setTheme(currentTheme === THEME.LIGHT ? THEME.DARK : THEME.LIGHT));
   };
 
   return (
-    <ThemeSwitchContainer>
-      <OpenEye />
-      <ClosedEye />
-      <Switch defaultChecked={currentTheme === 'dark'} onChange={toggleTheme} />
-    </ThemeSwitchContainer>
+    <SwitchContainer>
+      <input
+        type='checkbox'
+        defaultChecked={currentTheme === THEME.LIGHT}
+        onChange={toggleTheme}
+      />
+      <Slider className='slider' />
+    </SwitchContainer>
   );
 }

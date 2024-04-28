@@ -6,15 +6,22 @@ import { useSelector } from 'react-redux';
 import { ThemeState } from '@/store/themeSlice';
 import { darkTheme, lightTheme } from '@/common/styles/GlobalStyle';
 import { GlobalStyle } from '@/common/styles/GlobalStyle';
+import { useMount } from '@/common/hooks';
+import { baseTheme } from '@/common/constans/themes';
 
 export const AppThemeProvider: FC<PropsWithChildren> = ({ children }) => {
   const { currentTheme } = useSelector((state: { theme: ThemeState }) => state.theme);
-  const theme = currentTheme === 'light' ? darkTheme : lightTheme;
+  const isMounted = useMount();
+  const theme = currentTheme === baseTheme ? lightTheme : darkTheme;
 
   return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyle />
-      {children}
-    </ThemeProvider>
+    <>
+      {isMounted && (
+        <ThemeProvider theme={theme}>
+          <GlobalStyle />
+          {children}
+        </ThemeProvider>
+      )}
+    </>
   );
 };
