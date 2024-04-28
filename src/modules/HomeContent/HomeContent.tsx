@@ -1,9 +1,12 @@
-import { HomeContentStyled } from '@/modules/HomeContent/HomeContent.styled';
+import { HomeContentContainer } from '@/modules/HomeContent/HomeContent.styled';
+import { HomeText } from '@/modules/HomeContent/components/HomeText/HomeText';
+import { LinksGroup } from '@/modules/HomeContent/components/LinksGroup/LinksGroup';
 
 export const HomeContent = () => {
   return (
-    <HomeContentStyled>
-      <h1>HomeContent</h1>
-    </HomeContentStyled>
+    <HomeContentContainer>
+      <HomeText />
+      <LinksGroup />
+    </HomeContentContainer>
   );
 };

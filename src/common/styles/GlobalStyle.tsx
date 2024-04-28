@@ -11,12 +11,14 @@ export const darkTheme: DefaultTheme = {
   body: colors.black,
   text100: colors.white,
   text200: colors.gray,
+  groupborder: colors.white300,
 };
 
 export const lightTheme: DefaultTheme = {
   body: colors.white100,
   text100: colors.black,
   text200: colors.gray,
+  groupborder: colors.white300,
 };
 
 export const GlobalStyle = createGlobalStyle<GlobalStyleProps>`

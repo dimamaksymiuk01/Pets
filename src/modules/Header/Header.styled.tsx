@@ -2,10 +2,10 @@
 
 import styled from 'styled-components';
 
-export const HeaderStyled = styled.div`
+export const HeaderContainer = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 `;
 export const LogoContainer = styled.div`
   display: flex;
