@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { Jost } from 'next/font/google';
 import { RootProvider } from '@/common/providers';
 import '@/common/styles/normalize.css';
-import { Wrapper } from '@/common/components';
+import { Wrapper } from '@/modules/Wrapper/Wrapper';
 
 const inter = Jost({ subsets: ['latin'] });
 
