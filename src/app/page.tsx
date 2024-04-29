@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import { Header } from '@/modules/Header/Header';
 import { HomeContent } from '@/modules/HomeContent/HomeContent';
 
 export const metadata: Metadata = {
@@ -10,7 +9,6 @@ export const metadata: Metadata = {
 const Home = () => {
   return (
     <>
-      <Header />
       <HomeContent />
     </>
   );
