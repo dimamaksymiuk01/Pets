@@ -5,7 +5,7 @@ import { PosterWrapper } from '@/common/components/Poster/Poster.styled';
 export const Poster = () => {
   return (
     <PosterWrapper>
-      <Image src={poster} width={545} priority={true} alt={'girlAndCat'} />
+      {/*<Image src={poster} width={700} priority={true} alt={'girlAndCat'} />*/}
     </PosterWrapper>
   );
 };
