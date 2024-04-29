@@ -7,7 +7,7 @@ import {
 
 export const LinksButton = () => {
   const handleClick = () => {
-    console.log('There is future link at this btn');
+    // console.log('There is future link at this btn');
   };
 
   return (
