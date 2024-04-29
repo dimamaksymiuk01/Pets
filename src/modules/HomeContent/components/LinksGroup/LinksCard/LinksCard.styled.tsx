@@ -13,28 +13,28 @@ const insideCard = `
   height: 198px;
 `;
 
-export const LinksGroupContainer = styled.div`
+export const LinksCardContainer = styled.div`
   margin-top: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 16px;
 
-  div:nth-child(1) {
+  & > div:nth-child(1) {
     background-color: ${colors.purple};
-    border-color: ${(props) => props.theme.groupborder};
+    color: ${(props) => props.theme.groupborder};
     ${insideCard};
   }
 
-  div:nth-child(2) {
+  & > div:nth-child(2) {
     background-color: ${colors.green};
-    border-color: #ffffff99;
+    color: ${(props) => props.theme.groupborder};
     ${insideCard};
   }
 
-  div:nth-child(3) {
-    background-color: ${colors.purple};
-    border-color: #ffffff99;
+  & > div:nth-child(3) {
+    background-color: ${colors.peach};
+    color: ${(props) => props.theme.groupborder};
     ${insideCard};
   }
 `;

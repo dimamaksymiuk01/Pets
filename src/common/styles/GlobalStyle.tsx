@@ -12,6 +12,8 @@ export const darkTheme: DefaultTheme = {
   text100: colors.white,
   text200: colors.gray,
   groupborder: colors.white300,
+  btnHome: colors.black100,
+  btnHomeHover: colors.white400,
 };
 
 export const lightTheme: DefaultTheme = {
@@ -19,6 +21,8 @@ export const lightTheme: DefaultTheme = {
   text100: colors.black,
   text200: colors.gray,
   groupborder: colors.white300,
+  btnHome: colors.white,
+  btnHomeHover: colors.gray100,
 };
 
 export const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
