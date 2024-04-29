@@ -1,7 +1,6 @@
 'use client';
 
 import styled from 'styled-components';
-import { colors } from '@/common/styles';
 
 export const PosterWrapper = styled.div`
   width: 100%;
