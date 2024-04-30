@@ -4,7 +4,7 @@
 import type { FC, PropsWithChildren } from 'react';
 import { ThemeProvider } from 'styled-components';
 //style
-import { darkTheme, lightTheme, GlobalStyle } from '@/common/styles/GlobalStyle';
+import { darkTheme, lightTheme, GlobalStyle } from '@/common/styles';
 //instruments
 import { useMount, useTheme } from '@/common/hooks';
 //const

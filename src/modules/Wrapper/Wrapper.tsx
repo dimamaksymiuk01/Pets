@@ -3,7 +3,7 @@ import type { FC, PropsWithChildren } from 'react';
 //styles
 import { WrapperStyled } from './Wrapper.styled';
 //components
-import { NavigateMenu } from '@/modules/NavigateMenu/NavigateMenu';
+import { NavigateMenu } from '@/modules/NavigateMenu';
 
 export const Wrapper: FC<PropsWithChildren> = ({ children }) => (
   <WrapperStyled>
