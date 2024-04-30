@@ -1,9 +1,13 @@
+//types
 import type { FC, PropsWithChildren } from 'react';
-import { WrapperStyled } from '@/modules/Wrapper/Wrapper.styled';
-import { Poster } from '@/common/components/Poster/Poster';
+//styles
+import { WrapperStyled } from './Wrapper.styled';
+//components
+import { NavigateMenu } from '@/modules/NavigateMenu/NavigateMenu';
 
 export const Wrapper: FC<PropsWithChildren> = ({ children }) => (
   <WrapperStyled>
-    {children} <Poster />
+    <NavigateMenu />
+    {children}
   </WrapperStyled>
 );

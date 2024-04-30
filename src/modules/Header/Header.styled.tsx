@@ -1,5 +1,6 @@
 'use client';
 
+//core
 import styled from 'styled-components';
 
 export const HeaderContainer = styled.div`
@@ -15,4 +16,11 @@ export const LogoContainer = styled.div`
   font-size: 17px;
   font-weight: bold;
   gap: 5px;
+  cursor: pointer;
+  text-decoration: none;
+`;
+
+export const CustomLink = styled.a`
+  color: inherit;
+  text-decoration: none;
 `;

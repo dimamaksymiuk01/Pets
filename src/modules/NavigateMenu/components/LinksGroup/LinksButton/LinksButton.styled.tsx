@@ -1,6 +1,8 @@
 'use client';
 
+//core
 import styled from 'styled-components';
+//constants
 import { colors } from '@/common/styles';
 
 export const LinksButtonContainer = styled.div`
@@ -8,6 +10,9 @@ export const LinksButtonContainer = styled.div`
   align-items: center;
   justify-content: center;
   gap: 16px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
 `;
 export const StyledButton = styled.button`
   background-color: ${(props) => props.theme.btnHome};

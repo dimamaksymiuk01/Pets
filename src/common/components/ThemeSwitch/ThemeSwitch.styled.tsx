@@ -1,5 +1,6 @@
 'use client';
 
+//core
 import styled from 'styled-components';
 
 export const ThemeSwitchContainer = styled.div`
@@ -25,6 +26,7 @@ export const SwitchContainer = styled.label`
 
 export const Slider = styled.span`
   --background: #ff868e;
+  --box-shadow: #fff000;
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -43,17 +45,17 @@ export const Slider = styled.span`
     border-radius: 50%;
     left: 10%;
     bottom: 15%;
-    box-shadow: inset 8px -4px 0px 0px #fff000;
+    box-shadow: inset 8px -4px 0px 0px var(--box-shadow);
     background: var(--background);
     transition: 0.5s;
   }
 
   ${SwitchContainer} input:checked + & {
-    background-color: #ff868e;
+    background-color: var(--background);
 
     &:before {
       transform: translateX(100%);
-      box-shadow: inset 15px -4px 0px 15px #fff000;
+      box-shadow: inset 15px -4px 0px 15px var(--box-shadow);
     }
   }
 `;

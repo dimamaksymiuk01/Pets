@@ -1,16 +1,17 @@
 'use client';
 
+//core
 import type { FC, PropsWithChildren } from 'react';
 import { ThemeProvider } from 'styled-components';
-import { useSelector } from 'react-redux';
-import { ThemeState } from '@/store/themeSlice';
-import { darkTheme, lightTheme } from '@/common/styles/GlobalStyle';
-import { GlobalStyle } from '@/common/styles/GlobalStyle';
-import { useMount } from '@/common/hooks';
-import { baseTheme } from '@/common/constans/themes';
+//style
+import { darkTheme, lightTheme, GlobalStyle } from '@/common/styles/GlobalStyle';
+//instruments
+import { useMount, useTheme } from '@/common/hooks';
+//const
+import { baseTheme } from '@/common/constans';
 
 export const AppThemeProvider: FC<PropsWithChildren> = ({ children }) => {
-  const { currentTheme } = useSelector((state: { theme: ThemeState }) => state.theme);
+  const { currentTheme } = useTheme();
   const isMounted = useMount();
   const theme = currentTheme === baseTheme ? lightTheme : darkTheme;
 

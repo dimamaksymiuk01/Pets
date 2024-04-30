@@ -1,5 +1,7 @@
+//core
 import { Metadata } from 'next';
-import { HomeContent } from '@/modules/HomeContent/HomeContent';
+//components
+import { Poster } from '@/common/components';
 
 export const metadata: Metadata = {
   title: 'PETS | HOME',
@@ -7,11 +9,7 @@ export const metadata: Metadata = {
 };
 
 const Home = () => {
-  return (
-    <>
-      <HomeContent />
-    </>
-  );
+  return <Poster />;
 };
 
 export default Home;

@@ -1,24 +1,25 @@
+//core
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { THEME } from '@/common/constans/themes';
+//constants
+import { THEME_ENUM } from '@/common/constans';
 
 export interface ThemeState {
-  currentTheme: THEME.LIGHT | THEME.DARK;
+  currentTheme: THEME_ENUM.LIGHT | THEME_ENUM.DARK;
 }
 
 const initialState: ThemeState = {
-  currentTheme: THEME.LIGHT,
+  currentTheme: THEME_ENUM.LIGHT,
 };
 
 const themeSlice = createSlice({
   name: 'theme',
   initialState,
   reducers: {
-    setTheme: (state, action: PayloadAction<THEME.LIGHT | THEME.DARK>) => {
+    setTheme: (state, action: PayloadAction<THEME_ENUM.LIGHT | THEME_ENUM.DARK>) => {
       state.currentTheme = action.payload;
     },
-    getTheme: (state) => state,
   },
 });
 
-export const { setTheme, getTheme } = themeSlice.actions;
+export const { setTheme } = themeSlice.actions;
 export default themeSlice.reducer;

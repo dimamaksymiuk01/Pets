@@ -1,6 +1,8 @@
+//core
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
-import themeReducer from '@/store/themeSlice';
 import { persistStore, persistReducer } from 'redux-persist';
+//instruments
+import themeReducer from '@/store/themeSlice';
 import storage from 'redux-persist/lib/storage';
 
 const rootReducer = combineReducers({
@@ -25,3 +27,5 @@ const store = configureStore({
 });
 export const persistor = persistStore(store);
 export default store;
+export type RootState = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch;

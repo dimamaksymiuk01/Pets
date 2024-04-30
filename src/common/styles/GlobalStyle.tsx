@@ -1,12 +1,15 @@
 'use client';
 
-import { DefaultTheme } from 'styled-components';
-import { colors } from '@/common/styles/index';
+//core
 import { createGlobalStyle } from 'styled-components';
+import { DefaultTheme } from 'styled-components';
+//style
+import { colors } from './colors';
 
 interface GlobalStyleProps {
   theme?: DefaultTheme;
 }
+
 export const darkTheme: DefaultTheme = {
   body: colors.black,
   text100: colors.white,
