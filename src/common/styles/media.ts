@@ -7,6 +7,7 @@ const device = {
   xs: '375px',
   sm: '425px',
   md: '768px',
+  mt: '845',
   l: '1024px',
   lg: '1280px',
   xl: '1440px',
@@ -29,6 +30,11 @@ export const media: MediaObject = {
   `,
   md: (...args) => css`
     @media (min-width: ${device.md}) {
+      ${css(...args)};
+    }
+  `,
+  mt: (...args) => css`
+    @media (min-width: ${device.mt}) {
       ${css(...args)};
     }
   `,

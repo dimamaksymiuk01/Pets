@@ -1,7 +1,7 @@
 'use client';
 
-//core
 import styled from 'styled-components';
+import { media } from '@/common/styles';
 
 export const PosterWrapper = styled.div`
   width: 680px;
@@ -9,4 +9,14 @@ export const PosterWrapper = styled.div`
   background-color: ${(props) => props.theme.poster};
   border-radius: 20px;
   position: relative;
+
+  img {
+    position: absolute;
+    top: -62px;
+    right: 0;
+  }
+
+  @media (max-width: 845px) {
+    display: none;
+  }
 `;

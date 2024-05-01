@@ -3,11 +3,11 @@ import type { FC, PropsWithChildren } from 'react';
 //styles
 import { WrapperStyled } from './Wrapper.styled';
 //components
-import { NavigateMenu } from '@/modules/NavigateMenu';
+import { NavMenu } from '@/modules/NavMenu';
 
 export const Wrapper: FC<PropsWithChildren> = ({ children }) => (
   <WrapperStyled>
-    <NavigateMenu />
+    <NavMenu />
     {children}
   </WrapperStyled>
 );

@@ -1,7 +1,7 @@
 //styles
 import { NavMenuTextContainer } from './HomeText.styled';
 
-export const NavigateMenuText = () => (
+export const NavMenuText = () => (
   <NavMenuTextContainer>
     <span>Hi!👋</span>
     <span>Welcome to MacPaw Bootcamp 2024</span>

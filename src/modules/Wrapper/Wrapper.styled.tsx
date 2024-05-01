@@ -8,5 +8,5 @@ export const WrapperStyled = styled.div`
   display: flex;
   justify-content: space-between;
   max-width: 1440px;
-  gap: 137px;
+  gap: clamp(0.625rem, -8.446rem + 18.9vw, 8.563rem);
 `;

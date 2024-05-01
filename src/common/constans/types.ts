@@ -2,15 +2,13 @@
 import { ElementType } from 'react';
 import { StaticImageData } from 'next/image';
 
-export interface ILinksCardsData {
-  component: ElementType;
+export interface ILinksGroup {
+  card: ElementType;
+  button: ElementType;
   src: StaticImageData;
   width: number;
   height: number;
   alt: string;
-}
-
-export interface ILinksButtonProps {
   href: string;
   label: string;
 }
