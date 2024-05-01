@@ -1,5 +1,5 @@
 //styles
-import { NavMenuTextContainer } from './NavigateMenuText.styled';
+import { NavMenuTextContainer } from './HomeText.styled';
 
 export const NavigateMenuText = () => (
   <NavMenuTextContainer>

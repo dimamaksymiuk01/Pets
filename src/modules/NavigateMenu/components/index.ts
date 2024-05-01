@@ -1,2 +1,2 @@
-export * from './NavigateMenuText/NavigateMenuText';
+export * from './NavigateMenuText/HomeText';
 export * from './LinksGroup/LinksGroup';

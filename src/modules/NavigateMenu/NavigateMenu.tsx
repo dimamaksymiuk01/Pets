@@ -1,7 +1,7 @@
 //styles
 import { NavigateMenuContainer } from './NavigateMenu.styled';
 //components
-import { NavigateMenuText, LinksGroup } from './components';
+import { LinksGroup, NavigateMenuText } from './components';
 import { Header } from '@/modules';
 
 export const NavigateMenu = () => (
