@@ -6,12 +6,12 @@ import styled from 'styled-components';
 import { colors } from '@/common/styles';
 
 export const NavMenuTextContainer = styled.div`
-  padding-top: 80px;
   display: grid;
   grid-template-columns: 1fr;
   justify-items: left;
   font-weight: 500;
   font-size: 20px;
+  padding-top: 80px;
 
   span:nth-child(1) {
     font-size: 44px;
@@ -19,8 +19,8 @@ export const NavMenuTextContainer = styled.div`
 
   span:nth-child(2) {
     color: ${colors.gray};
-    padding-top: 10px;
     font-weight: 400;
+    padding-top: 10px;
   }
 
   span:nth-child(3) {

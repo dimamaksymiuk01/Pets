@@ -60,4 +60,8 @@ export const StyledButton = styled.button`
   &:hover {
     background-color: ${(props) => props.theme.btnHomeHover};
   }
+  &:active {
+    background-color: ${(props) => props.theme.btnHomeActive};
+    color: ${colors.white};
+  }
 `;

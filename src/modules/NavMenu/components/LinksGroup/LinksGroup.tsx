@@ -14,7 +14,14 @@ export const LinksGroup = () => (
     {linksData.map(({ card: Component, id, href, label, src, width, height, alt }) => (
       <CardWithButtonContainer key={id}>
         <Component>
-          <Image src={src} width={width} height={height} priority alt={alt} />
+          <Image
+            src={src}
+            quality={100}
+            width={width}
+            height={height}
+            priority
+            alt={alt}
+          />
         </Component>
         <Link key={id} href={href}>
           <StyledButton>{label}</StyledButton>

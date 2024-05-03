@@ -5,7 +5,6 @@ import styled from 'styled-components';
 
 export const HeaderContainer = styled.div`
   display: flex;
-  align-items: center;
   justify-content: space-between;
   width: 100%;
 `;
@@ -17,7 +16,6 @@ export const LogoContainer = styled.div`
   font-weight: bold;
   gap: 5px;
   cursor: pointer;
-  text-decoration: none;
 `;
 
 export const CustomLink = styled.a`

@@ -6,8 +6,6 @@ import Girl from '@/public/pictures/girlAndCat.png';
 
 export const Poster = () => (
   <PosterWrapper>
-    <div>
-      <Image src={Girl} alt={'girl and cat'} />
-    </div>
+    <Image src={Girl} quality={100} alt={'girl and cat'} />
   </PosterWrapper>
 );

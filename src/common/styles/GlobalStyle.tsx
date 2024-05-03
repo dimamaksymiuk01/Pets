@@ -16,7 +16,8 @@ export const darkTheme: DefaultTheme = {
   text200: colors.gray,
   groupborder: colors.white300,
   btnHome: colors.black100,
-  btnHomeHover: colors.white400,
+  btnHomeHover: colors.white200,
+  btnHomeActive: colors.pink,
   poster: colors.black100,
 };
 
@@ -26,7 +27,8 @@ export const lightTheme: DefaultTheme = {
   text200: colors.gray,
   groupborder: colors.white300,
   btnHome: colors.white,
-  btnHomeHover: colors.gray100,
+  btnHomeHover: colors.white200,
+  btnHomeActive: colors.pink,
   poster: colors.white200,
 };
 
