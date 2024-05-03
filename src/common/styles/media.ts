@@ -1,6 +1,6 @@
 'use client';
 
-//types
+/* instruments */
 import { type StyleFunction, type StyledObject, css } from 'styled-components';
 
 const device = {

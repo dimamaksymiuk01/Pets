@@ -1,11 +1,10 @@
-//types
+/* core */
 import type { Metadata } from 'next';
-//styles
-import '@/common/styles/normalize.css';
 import { Jost } from 'next/font/google';
-//instruments
+/* instruments */
 import { RootProvider } from '@/common/providers';
-//components
+import '@/common/styles/normalize.css';
+/* components */
 import { Wrapper } from '@/modules';
 
 const inter = Jost({ subsets: ['latin'] });

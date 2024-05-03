@@ -1,6 +1,6 @@
-//core
+/* core */
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-//constants
+/* instruments */
 import { THEME_ENUM } from '@/common/constans';
 
 export interface ThemeState {

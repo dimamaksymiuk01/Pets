@@ -1,13 +1,12 @@
-//core
+/* core */
 import Image from 'next/image';
 import Link from 'next/link';
-//pictures
+/* instruments */
+import { ILinksGroup } from '@/common/constans';
+/* components */
 import Voting from '@/public/pictures/voting.png';
 import Breeds from '@/public/pictures/breeds.png';
 import Gallery from '@/public/pictures/gallery.png';
-//constants
-import { ILinksGroup } from '@/common/constans';
-//styles
 import {
   BreedsCard,
   GalleryCard,

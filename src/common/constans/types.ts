@@ -1,4 +1,4 @@
-//core
+/* core */
 import { ElementType } from 'react';
 import { StaticImageData } from 'next/image';
 

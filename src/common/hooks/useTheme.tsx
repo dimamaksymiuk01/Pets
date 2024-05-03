@@ -1,10 +1,9 @@
-//core
+/* core */
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
-import { setTheme } from '@/store/themeSlice';
-//types
+/* instruments */
 import { AppDispatch, RootState } from '@/store';
-//enum
 import { THEME_ENUM } from '@/common/constans';
+import { setTheme } from '@/store/themeSlice';
 
 const useAppDispatch: () => AppDispatch = useDispatch;
 const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;

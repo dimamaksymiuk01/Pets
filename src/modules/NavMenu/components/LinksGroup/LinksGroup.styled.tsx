@@ -1,8 +1,8 @@
 'use client';
 
-//core
+/* core */
 import styled from 'styled-components';
-//constants
+/* instruments */
 import { colors } from '@/common/styles';
 
 const insideCard = `

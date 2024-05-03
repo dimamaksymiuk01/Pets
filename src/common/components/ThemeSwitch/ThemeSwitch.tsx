@@ -1,9 +1,9 @@
 'use client';
 
-//instruments
+/* instruments */
 import { useTheme } from '@/common/hooks';
 import { THEME_ENUM } from '@/common/constans';
-//components
+/* components */
 import { Slider, SwitchContainer } from './ThemeSwitch.styled';
 
 export const ThemeSwitch = () => {

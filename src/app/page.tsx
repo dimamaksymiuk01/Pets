@@ -1,6 +1,6 @@
-//core
+/* core */
 import { Metadata } from 'next';
-//components
+/* components */
 import { Poster } from '@/common/components';
 
 export const metadata: Metadata = {

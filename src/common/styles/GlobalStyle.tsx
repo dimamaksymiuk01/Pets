@@ -1,9 +1,9 @@
 'use client';
 
-//core
+/* core */
 import { createGlobalStyle } from 'styled-components';
 import { DefaultTheme } from 'styled-components';
-//style
+/* instruments */
 import { colors } from './colors';
 
 interface GlobalStyleProps {

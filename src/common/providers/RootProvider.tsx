@@ -1,8 +1,8 @@
 'use client';
 
-//type
+/* core */
 import type { FC, PropsWithChildren } from 'react';
-//components
+/* instruments */
 import { AppThemeProvider, StoreProvider } from '@/common/providers';
 
 export const RootProvider: FC<PropsWithChildren> = ({ children }) => (

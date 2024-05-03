@@ -1,13 +1,11 @@
 'use client';
 
-//core
+/* core */
 import type { FC, PropsWithChildren } from 'react';
 import { ThemeProvider } from 'styled-components';
-//style
+/* instruments */
 import { darkTheme, lightTheme, GlobalStyle } from '@/common/styles';
-//instruments
 import { useMount, useTheme } from '@/common/hooks';
-//const
 import { baseTheme } from '@/common/constans';
 
 export const AppThemeProvider: FC<PropsWithChildren> = ({ children }) => {

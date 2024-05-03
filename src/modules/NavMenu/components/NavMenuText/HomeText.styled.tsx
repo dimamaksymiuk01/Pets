@@ -1,8 +1,8 @@
 'use client';
 
-//core
+/* core */
 import styled from 'styled-components';
-//constants
+/* instruments */
 import { colors } from '@/common/styles';
 
 export const NavMenuTextContainer = styled.div`
@@ -24,6 +24,6 @@ export const NavMenuTextContainer = styled.div`
   }
 
   span:nth-child(3) {
-    padding-top: 60px;
+    padding-top: clamp(1.875rem, 0.794rem + 5.41vw, 3.75rem);
   }
 `;

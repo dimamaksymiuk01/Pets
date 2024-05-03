@@ -1,6 +1,5 @@
-//styles
+/* components */
 import { NavMenuContainer } from './NavMenu.styled';
-//components
 import { LinksGroup, NavMenuText } from './components';
 import { Header } from '@/modules';
 

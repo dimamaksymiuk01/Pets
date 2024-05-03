@@ -1,4 +1,4 @@
-//styles
+/* components */
 import { NavMenuTextContainer } from './HomeText.styled';
 
 export const NavMenuText = () => (

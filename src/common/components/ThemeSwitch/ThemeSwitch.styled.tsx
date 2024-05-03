@@ -1,6 +1,6 @@
 'use client';
 
-//core
+/* core */
 import styled from 'styled-components';
 
 export const ThemeSwitchContainer = styled.div`

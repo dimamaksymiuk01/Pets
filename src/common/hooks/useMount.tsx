@@ -1,4 +1,4 @@
-//core
+/* core */
 import { useEffect, useState } from 'react';
 
 export const useMount = () => {
