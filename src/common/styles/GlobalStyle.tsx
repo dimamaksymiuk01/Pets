@@ -7,7 +7,7 @@ import { DefaultTheme } from 'styled-components';
 /* instruments */
 import { colors } from './colors';
 
-interface GlobalStyleProps {
+interface IGlobalStyleProps {
   theme?: DefaultTheme;
 }
 
@@ -33,7 +33,7 @@ export const lightTheme: DefaultTheme = {
   poster: colors.white200,
 };
 
-export const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
+export const GlobalStyle = createGlobalStyle<IGlobalStyleProps>`
   body {
     background-color: ${({ theme }) => theme.body};
     color: ${({ theme }) => theme.text100};

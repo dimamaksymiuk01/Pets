@@ -1,5 +1,6 @@
 /* instruments */
 import { ILinksData } from './typeLinksData';
+import { ROUTES_ENUM } from '@/common/enums';
 
 /* components */
 import Voting from '@/public/pictures/voting.png';
@@ -15,7 +16,7 @@ export const linksData: ILinksData[] = [
     width: 100,
     height: 124,
     alt: 'Picture of voting',
-    href: '/voting',
+    href: ROUTES_ENUM.VOTING,
     label: 'VOTING',
   },
   {
@@ -25,7 +26,7 @@ export const linksData: ILinksData[] = [
     width: 117,
     height: 163,
     alt: 'Picture of breeds',
-    href: '/breeds',
+    href: ROUTES_ENUM.BREEDS,
     label: 'BREEDS',
   },
   {
@@ -35,7 +36,7 @@ export const linksData: ILinksData[] = [
     width: 112,
     height: 190,
     alt: 'Picture of voting',
-    href: '/gallery',
+    href: ROUTES_ENUM.GALLERY,
     label: 'GALLERY',
   },
 ];

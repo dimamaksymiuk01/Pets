@@ -11,11 +11,11 @@ export const ThemeSwitchContainer = styled.div`
 `;
 
 export const SwitchContainer = styled.label`
-  font-size: 12.88px;
+  font-size: 13px;
   position: relative;
   display: inline-block;
-  width: 3.5em;
-  height: 2em;
+  width: 45px;
+  height: 26px;
 
   input {
     opacity: 0;
@@ -40,8 +40,8 @@ export const Slider = styled.span`
   &:before {
     position: absolute;
     content: '';
-    height: 1.4em;
-    width: 1.4em;
+    height: 18px;
+    width: 17px;
     border-radius: 50%;
     left: 10%;
     bottom: 15%;
