@@ -3,6 +3,7 @@
 /* instruments */
 import { useTheme } from '@/common/hooks';
 import { THEME_ENUM } from '@/common/constans';
+
 /* components */
 import { Slider, SwitchContainer } from './ThemeSwitch.styled';
 

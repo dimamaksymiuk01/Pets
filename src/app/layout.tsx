@@ -1,9 +1,11 @@
 /* core */
 import type { Metadata } from 'next';
 import { Jost } from 'next/font/google';
+
 /* instruments */
 import { RootProvider } from '@/common/providers';
 import '@/common/styles/normalize.css';
+
 /* components */
 import { Wrapper } from '@/modules';
 

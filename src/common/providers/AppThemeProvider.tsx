@@ -3,6 +3,7 @@
 /* core */
 import type { FC, PropsWithChildren } from 'react';
 import { ThemeProvider } from 'styled-components';
+
 /* instruments */
 import { darkTheme, lightTheme, GlobalStyle } from '@/common/styles';
 import { useMount, useTheme } from '@/common/hooks';

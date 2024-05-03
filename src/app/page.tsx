@@ -1,5 +1,6 @@
 /* core */
 import { Metadata } from 'next';
+
 /* components */
 import { Poster } from '@/common/components';
 

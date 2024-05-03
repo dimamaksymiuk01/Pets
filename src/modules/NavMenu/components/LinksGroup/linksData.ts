@@ -1,5 +1,6 @@
 /* instruments */
 import { ILinksData } from './typeLinksData';
+
 /* components */
 import Voting from '@/public/pictures/voting.png';
 import Breeds from '@/public/pictures/breeds.png';

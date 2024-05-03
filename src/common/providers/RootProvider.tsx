@@ -2,6 +2,7 @@
 
 /* core */
 import type { FC, PropsWithChildren } from 'react';
+
 /* instruments */
 import { AppThemeProvider, StoreProvider } from '@/common/providers';
 

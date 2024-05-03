@@ -4,6 +4,7 @@
 import type { FC, PropsWithChildren } from 'react';
 import { PersistGate } from 'redux-persist/integration/react';
 import { Provider } from 'react-redux';
+
 /* instruments */
 import store, { persistor } from '@/store';
 

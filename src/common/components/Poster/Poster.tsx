@@ -1,5 +1,6 @@
 /* core */
 import Image from 'next/image';
+
 /* components */
 import { PosterWrapper } from './Poster.styled';
 import Girl from '@/public/pictures/girlAndCat.png';

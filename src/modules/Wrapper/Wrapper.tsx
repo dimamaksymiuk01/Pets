@@ -1,5 +1,6 @@
 /* instruments */
 import type { FC, PropsWithChildren } from 'react';
+
 /* components */
 import { WrapperStyled } from './Wrapper.styled';
 import { NavMenu } from '@/modules/NavMenu';
