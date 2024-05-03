@@ -2,9 +2,9 @@
 import { ElementType } from 'react';
 import { StaticImageData } from 'next/image';
 
-export interface ILinksGroup {
+export interface ILinksData {
+  id: number;
   card: ElementType;
-  button: ElementType;
   src: StaticImageData;
   width: number;
   height: number;
