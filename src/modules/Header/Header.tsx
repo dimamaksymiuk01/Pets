@@ -1,10 +1,10 @@
-/* instruments */
-import { ROUTES_ENUM } from '@/common/enums';
-
 /* components */
 import { ThemeSwitch } from '@/common/components';
 import { CustomLink, HeaderContainer, LogoContainer } from './Header.styled';
 import Logo from '@/public/icons/logo.svg';
+
+/* instruments */
+import { ROUTES_ENUM } from '@/common/enums';
 
 export const Header = () => (
   <HeaderContainer>

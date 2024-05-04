@@ -8,6 +8,8 @@ import {
   StyledButton,
   CardWithButtonContainer,
 } from './LinksGroup.styled';
+
+/*instruments */
 import { linksData } from './linksData';
 
 export const LinksGroup = () => (

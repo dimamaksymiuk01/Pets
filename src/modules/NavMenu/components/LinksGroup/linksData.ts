@@ -1,16 +1,16 @@
-/* instruments */
-import { ILinksData } from './typeLinksData';
-import { ROUTES_ENUM } from '@/common/enums';
-
 /* components */
 import Voting from '@/public/pictures/voting.png';
 import Breeds from '@/public/pictures/breeds.png';
 import Gallery from '@/public/pictures/gallery.png';
 import { BreedsCard, GalleryCard, VotingCard } from './LinksGroup.styled';
 
+/* instruments */
+import { ILinksData } from './typeLinksData';
+import { ROUTES_ENUM } from '@/common/enums';
+
 export const linksData: ILinksData[] = [
   {
-    id: 0,
+    id: 1,
     card: VotingCard,
     src: Voting,
     width: 100,
@@ -20,7 +20,7 @@ export const linksData: ILinksData[] = [
     label: 'VOTING',
   },
   {
-    id: 1,
+    id: 2,
     card: BreedsCard,
     src: Breeds,
     width: 117,
@@ -30,7 +30,7 @@ export const linksData: ILinksData[] = [
     label: 'BREEDS',
   },
   {
-    id: 2,
+    id: 3,
     card: GalleryCard,
     src: Gallery,
     width: 112,

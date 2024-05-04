@@ -1,10 +1,11 @@
 /* core */
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+
 /* instruments */
 import { THEME_ENUM } from '@/common/constans';
 
 export interface ThemeState {
-  currentTheme: THEME_ENUM.LIGHT | THEME_ENUM.DARK;
+  currentTheme: THEME_ENUM;
 }
 
 const initialState: ThemeState = {
