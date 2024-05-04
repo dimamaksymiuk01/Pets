@@ -1,18 +1,16 @@
+/* core */
 import { Metadata } from 'next';
-import { StyledApp } from '@/common/components/ThemeSwitch/ThemeSwitch.styled';
-import ThemeSwitch from '@/common/components/ThemeSwitch/ThemeSwitch';
+
+/* components */
+import { Poster } from '@/common/components';
 
 export const metadata: Metadata = {
-  title: 'PETS | HONE',
+  title: 'PETS | HOME',
   description: 'PETS',
 };
 
 const Home = () => {
-  return (
-    <StyledApp>
-      <ThemeSwitch />
-    </StyledApp>
-  );
+  return <Poster />;
 };
 
 export default Home;

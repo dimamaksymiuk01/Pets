@@ -1,24 +1,23 @@
 'use client';
 
-import { ThemeProvider } from 'styled-components';
-import { useState } from 'react';
-import { Switch } from 'antd';
-import { darkTheme, lightTheme, StyledApp } from './ThemeSwitch.styled';
+/* instruments */
+import { useTheme } from '@/common/hooks';
+import { THEME_ENUM } from '@/common/constans';
 
-export default function ThemeSwitch() {
-  const [theme, setTheme] = useState('dark');
-  const isDarkTheme = theme === 'dark';
+/* components */
+import { Slider, SwitchContainer } from './ThemeSwitch.styled';
 
-  const togleTheme = () => {
-    setTheme(isDarkTheme ? 'light' : 'dark');
-  };
+export const ThemeSwitch = () => {
+  const { currentTheme, toggleTheme } = useTheme();
+
   return (
-    <>
-      <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
-        <StyledApp>
-          <Switch defaultChecked onChange={togleTheme} />
-        </StyledApp>
-      </ThemeProvider>
-    </>
+    <SwitchContainer>
+      <input
+        type='checkbox'
+        defaultChecked={currentTheme === THEME_ENUM.LIGHT}
+        onChange={toggleTheme}
+      />
+      <Slider className='slider' />
+    </SwitchContainer>
   );
-}
+};

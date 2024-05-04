@@ -1,9 +1,15 @@
+/* core */
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Jost } from 'next/font/google';
 
+/* components */
+import { Wrapper } from '@/modules';
+
+/* instruments */
+import { RootProvider } from '@/common/providers';
 import '@/common/styles/normalize.css';
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Jost({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Pets',
@@ -17,7 +23,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <RootProvider>
+          <Wrapper>{children}</Wrapper>
+        </RootProvider>
+      </body>
     </html>
   );
 }
