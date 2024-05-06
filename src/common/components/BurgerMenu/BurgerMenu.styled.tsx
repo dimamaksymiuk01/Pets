@@ -1,11 +1,14 @@
 'use client';
 
 import styled from 'styled-components';
+import { colors } from '@/common/styles';
 
 export const HeaderContainer = styled.div`
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   z-index: 100;
+  border-radius: 20px;
+  background-color: ${colors.white500};
   position: relative;
 `;
 
@@ -15,7 +18,7 @@ export const NavContainer = styled.nav`
   justify-content: center;
 `;
 
-export const MenuItems = styled.ul<{ isOpen: boolean }>`
+export const MenuItems = styled.div<{ isOpen: boolean }>`
   display: flex;
   list-style: none;
   padding-top: 120px;
@@ -26,33 +29,18 @@ export const MenuItems = styled.ul<{ isOpen: boolean }>`
   width: ${(props) => (props.isOpen ? '100vw' : 'auto')};
   transform: ${(props) => (props.isOpen ? 'translateX(0)' : 'translate(-150%)')};
   flex-direction: column;
-  margin-left: -40px;
-  padding-left: 50px;
   transition: transform 0.5s ease-in-out;
-  text-align: center;
   position: ${(props) => (props.isOpen ? 'fixed' : 'relative')};
   top: ${(props) => (props.isOpen ? '-30px' : 'auto')};
   left: ${(props) => (props.isOpen ? '0' : 'auto')};
   z-index: ${(props) => (props.isOpen ? '99' : '1')};
-  background-color: ${(props) => (props.isOpen ? '#fff' : 'transparent')};
+  background-color: ${(props) => (props.isOpen ? colors.white100 : 'transparent')};
+`;
 
-  li {
-    margin-bottom: 1.2rem;
-    font-size: 1.5rem;
-    font-weight: 500;
-  }
-
-  a {
-    text-decoration: none;
-    color: #0e2431;
-    font-weight: 500;
-    font-size: 1.2rem;
-    padding: 0.7rem;
-
-    &:hover {
-      font-weight: bolder;
-    }
-  }
+export const TestInp = styled.input`
+  width: 100%;
+  display: flex;
+  justify-content: center;
 `;
 
 export const Checkbox = styled.input`
@@ -71,7 +59,7 @@ export const HamburgerLines = styled.div`
   height: 26px;
   width: 32px;
   position: absolute;
-  top: 12px;
+  top: 17px;
   z-index: 2;
   display: flex;
   flex-direction: column;
@@ -83,7 +71,7 @@ export const Line = styled.span`
   height: 4px;
   width: 100%;
   border-radius: 10px;
-  background: #0e2431;
+  background: ${colors.pink};
 `;
 
 export const Line1 = styled(Line)<{ isOpen: boolean }>`

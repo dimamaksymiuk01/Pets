@@ -11,7 +11,9 @@ import {
   MenuItems,
   NavContainer,
   Overlay,
+  TestInp,
 } from './BurgerMenu.styled';
+import { LinksGroup } from '@/modules/NavMenu/components';
 
 export const HamburgerMenu: FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,21 +32,8 @@ export const HamburgerMenu: FC = () => {
           <Line3 isOpen={isOpen} />
         </HamburgerLines>
         <MenuItems isOpen={isOpen}>
-          <li>
-            <a href='#'>Home</a>
-          </li>
-          <li>
-            <a href='#'>About</a>
-          </li>
-          <li>
-            <a href='#'>Blogs</a>
-          </li>
-          <li>
-            <a href='#'>Portfolio</a>
-          </li>
-          <li>
-            <a href='#'>Contact</a>
-          </li>
+          <TestInp type={'checkbox'} checked={isOpen} onChange={toggleMenu} />
+          <LinksGroup />
         </MenuItems>
         <Overlay isOpen={isOpen} />
       </NavContainer>
