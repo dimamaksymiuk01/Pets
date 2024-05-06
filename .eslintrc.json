@@ -8,7 +8,8 @@
     "plugin:react-hooks/recommended",
     "plugin:react/recommended",
     "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/recommended"
   ],
   "ignorePatterns": [
     "node_modules",
@@ -31,12 +32,25 @@
   "plugins": [
     "react",
     "react-hooks",
-    "@typescript-eslint"
+    "@typescript-eslint",
+    "import"
   ],
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true,
+        "project": "./tsconfig.json"
+      }
+    }
+  },
   "rules": {
     "no-console": "warn",
     "react/react-in-jsx-scope": "off",
     "@typescript-eslint/no-unused-vars": "off",
-    "react/no-unescaped-entities": "off"
+    "react/no-unescaped-entities": "off",
+    "import/no-cycle": "warn"
   }
 }
