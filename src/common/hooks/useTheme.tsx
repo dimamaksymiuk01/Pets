@@ -4,7 +4,7 @@ import { useCallback } from 'react';
 /* instruments */
 import { THEME_ENUM } from '@/common/constans';
 import { setTheme } from '@/store/themeSlice';
-import { useAppDispatch, useAppSelector } from '@/common/hooks';
+import { useAppDispatch, useAppSelector } from '@/common/hooks/stor';
 
 export const useTheme = () => {
   const dispatch = useAppDispatch();

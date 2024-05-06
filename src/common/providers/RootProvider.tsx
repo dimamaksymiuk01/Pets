@@ -4,7 +4,8 @@
 import type { FC, PropsWithChildren } from 'react';
 
 /* instruments */
-import { AppThemeProvider, StoreProvider } from '@/common/providers';
+import { StoreProvider } from './StoreProvider';
+import { AppThemeProvider } from './AppThemeProvider';
 
 export const RootProvider: FC<PropsWithChildren> = ({ children }) => (
   <StoreProvider>

@@ -52,6 +52,7 @@
     "react/react-in-jsx-scope": "off",
     "@typescript-eslint/no-unused-vars": "off",
     "react/no-unescaped-entities": "off",
-    "import/no-cycle": "warn"
+    "import/no-cycle": "warn",
+    "import/no-named-as-default": ["off"]
   }
 }

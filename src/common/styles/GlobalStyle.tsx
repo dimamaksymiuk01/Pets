@@ -1,8 +1,7 @@
 'use client';
 
 /* core */
-import { createGlobalStyle } from 'styled-components';
-import { DefaultTheme } from 'styled-components';
+import { createGlobalStyle, DefaultTheme } from 'styled-components';
 
 /* instruments */
 import { colors } from './colors';
