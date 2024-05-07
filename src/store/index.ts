@@ -4,9 +4,11 @@ import { persistStore, persistReducer } from 'redux-persist';
 //instruments
 import themeReducer from '@/store/themeSlice';
 import storage from 'redux-persist/lib/storage';
+import menuSlice from '@/store/menuSlice';
 
 const rootReducer = combineReducers({
   theme: themeReducer,
+  menu: menuSlice,
 });
 
 export const persistConfig = {

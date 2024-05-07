@@ -10,21 +10,23 @@ export const HeaderContainer = styled.div`
   border-radius: 20px;
   background-color: ${colors.white500};
   position: relative;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
 `;
 
 export const NavContainer = styled.nav`
   height: 100%;
   display: flex;
   justify-content: center;
+  position: relative;
 `;
 
 export const MenuItems = styled.div<{ isOpen: boolean }>`
   display: flex;
   list-style: none;
   padding-top: 120px;
-  box-shadow: ${(props) =>
-    props.isOpen ? 'inset 0 0 2000px rgba(255, 255, 255, 0.5)' : 'none'};
-
   height: ${(props) => (props.isOpen ? '100vh' : 'auto')};
   width: ${(props) => (props.isOpen ? '100vw' : 'auto')};
   transform: ${(props) => (props.isOpen ? 'translateX(0)' : 'translate(-150%)')};
@@ -32,13 +34,16 @@ export const MenuItems = styled.div<{ isOpen: boolean }>`
   transition: transform 0.5s ease-in-out;
   position: ${(props) => (props.isOpen ? 'fixed' : 'relative')};
   top: ${(props) => (props.isOpen ? '-30px' : 'auto')};
-  left: ${(props) => (props.isOpen ? '0' : 'auto')};
+  left: ${(props) => (props.isOpen ? '0' : '-300px')};
   z-index: ${(props) => (props.isOpen ? '99' : '1')};
-  background-color: ${(props) => (props.isOpen ? colors.white100 : 'transparent')};
+  // background-color: ${(props) => (props.isOpen ? colors.white100 : 'transparent')};
+  background-color: ${({ theme }) => theme.body};
 `;
 
-export const TestInp = styled.input`
-  width: 100%;
+export const BurgerContainer = styled.div`
+  position: absolute;
+  right: 20px;
+  left: 20px;
   display: flex;
   justify-content: center;
 `;
@@ -48,8 +53,8 @@ export const Checkbox = styled.input`
   display: block;
   height: 32px;
   width: 32px;
-  top: 20px;
-  left: 20px;
+  top: 15px;
+  left: 15px;
   z-index: 5;
   opacity: 0;
   cursor: pointer;
@@ -66,16 +71,44 @@ export const HamburgerLines = styled.div`
   justify-content: space-between;
 `;
 
+export const HamburgerClosedLines = styled.div`
+  height: 60px;
+  width: 60px;
+  background-color: ${colors.white500};
+  border-radius: 20px;
+  position: absolute;
+  top: 55px;
+  right: 20px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: opacity 0.5s ease-in-out;
+`;
+
+export const CheckboxClose = styled.input`
+  position: absolute;
+  display: block;
+  height: 32px;
+  width: 32px;
+  top: 55px;
+  right: 20px;
+  z-index: 5;
+  opacity: 0;
+  cursor: pointer;
+  color: black;
+`;
+
 export const Line = styled.span`
   display: block;
   height: 4px;
-  width: 100%;
+  width: 30px;
   border-radius: 10px;
   background: ${colors.pink};
 `;
 
 export const Line1 = styled(Line)<{ isOpen: boolean }>`
-  transform-origin: 0;
+  transform-origin: -10px;
   transition: transform 0.4s ease-in-out;
   transform: ${(props) => (props.isOpen ? 'rotate(45deg)' : 'none')};
 `;
@@ -86,7 +119,28 @@ export const Line2 = styled(Line)<{ isOpen: boolean }>`
 `;
 
 export const Line3 = styled(Line)<{ isOpen: boolean }>`
-  transform-origin: 0% 100%;
+  transform-origin: -10px;
+  transition: transform 0.4s ease-in-out;
+  transform: ${(props) => (props.isOpen ? 'rotate(-45deg)' : 'none')};
+`;
+
+export const Line4 = styled(Line)<{ isOpen: boolean }>`
+  margin-top: 9px;
+  margin-left: 23px;
+  transform-origin: -10px;
+  transition: transform 0.4s ease-in-out;
+  transform: ${(props) => (props.isOpen ? 'rotate(45deg)' : 'none')};
+`;
+
+export const Line5 = styled(Line)<{ isOpen: boolean }>`
+  transition: transform 0.2s ease-in-out;
+  transform: ${(props) => (props.isOpen ? 'scaleY(0)' : 'none')};
+`;
+
+export const Line6 = styled(Line)<{ isOpen: boolean }>`
+  margin-bottom: 18px;
+  margin-left: 20px;
+  transform-origin: 0;
   transition: transform 0.4s ease-in-out;
   transform: ${(props) => (props.isOpen ? 'rotate(-45deg)' : 'none')};
 `;

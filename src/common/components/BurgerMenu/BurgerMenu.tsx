@@ -1,26 +1,28 @@
 'use client';
 
-import { FC, useState } from 'react';
 import {
+  BurgerContainer,
   Checkbox,
+  CheckboxClose,
+  HamburgerClosedLines,
   HamburgerLines,
   HeaderContainer,
   Line1,
   Line2,
   Line3,
+  Line4,
+  Line5,
+  Line6,
   MenuItems,
   NavContainer,
   Overlay,
-  TestInp,
 } from './BurgerMenu.styled';
 import { LinksGroup } from '@/modules/NavMenu/components';
+import { useMenu } from '@/common/hooks';
+import { Logo } from '@/common/components/Logo/Logo';
 
-export const HamburgerMenu: FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+export const HamburgerMenu = () => {
+  const { isOpen, toggleMenu } = useMenu();
 
   return (
     <HeaderContainer>
@@ -32,8 +34,18 @@ export const HamburgerMenu: FC = () => {
           <Line3 isOpen={isOpen} />
         </HamburgerLines>
         <MenuItems isOpen={isOpen}>
-          <TestInp type={'checkbox'} checked={isOpen} onChange={toggleMenu} />
-          <LinksGroup />
+          {/*<div>*/}
+          {/*  <Logo />*/}
+          {/*</div>*/}
+          <CheckboxClose type='checkbox' checked={isOpen} onChange={toggleMenu} />
+          <HamburgerClosedLines>
+            <Line4 isOpen={isOpen} />
+            <Line5 isOpen={isOpen} />
+            <Line6 isOpen={isOpen} />
+          </HamburgerClosedLines>
+          <BurgerContainer>
+            <LinksGroup />
+          </BurgerContainer>
         </MenuItems>
         <Overlay isOpen={isOpen} />
       </NavContainer>

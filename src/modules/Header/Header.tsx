@@ -1,22 +1,16 @@
 /* components */
 import { ThemeSwitch } from '@/common/components';
-import { CustomLink, HeaderContainer, LeftBar, LogoContainer } from './Header.styled';
-import Logo from '@/public/icons/logo.svg';
+import { HeaderContainer, LeftBar } from './Header.styled';
+import { Logo } from '@/common/components/Logo/Logo';
 
 /* instruments */
-import { ROUTES_ENUM } from '@/common/enums';
 import { HamburgerMenu } from '@/common/components/BurgerMenu/BurgerMenu';
 
 export const Header = () => (
   <HeaderContainer>
     <LeftBar>
       <HamburgerMenu />
-      <CustomLink href={ROUTES_ENUM.HOME}>
-        <LogoContainer>
-          <Logo />
-          <span>PetsPaw</span>
-        </LogoContainer>
-      </CustomLink>
+      <Logo />
     </LeftBar>
     <ThemeSwitch />
   </HeaderContainer>
