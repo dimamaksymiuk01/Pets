@@ -1,6 +1,6 @@
-import { ComponentType } from 'react';
-import { Line1, Line2, Line3, Line4, Line5, Line6 } from './BurgerMenu.styled';
-import boolean from 'async-validator/dist-types/validator/boolean';
+// import { ComponentType } from 'react';
+// import { Line1, Line2, Line3, Line4, Line5, Line6 } from './BurgerMenu.styled';
+// import boolean from 'async-validator/dist-types/validator/boolean';
 
 // interface IMenuLine {
 //   Component: ComponentType;

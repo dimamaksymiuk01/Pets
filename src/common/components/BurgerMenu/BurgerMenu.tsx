@@ -1,5 +1,6 @@
 'use client';
 
+/* components */
 import {
   BurgerContainer,
   Checkbox,
@@ -17,10 +18,12 @@ import {
   NavContainer,
   Overlay,
 } from './BurgerMenu.styled';
-import { LinksGroup } from '@/modules/NavMenu/components';
+import { LinksGroup } from '@/common/components/LinksGroup';
+
+/* instruments */
 import { useMenu } from '@/common/hooks';
 
-export const HamburgerMenu = () => {
+export const BurgerMenu = () => {
   const { isOpen, toggleMenu } = useMenu();
 
   return (
