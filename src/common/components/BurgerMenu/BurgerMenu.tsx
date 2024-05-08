@@ -19,7 +19,6 @@ import {
 } from './BurgerMenu.styled';
 import { LinksGroup } from '@/modules/NavMenu/components';
 import { useMenu } from '@/common/hooks';
-import { Logo } from '@/common/components/Logo/Logo';
 
 export const HamburgerMenu = () => {
   const { isOpen, toggleMenu } = useMenu();
@@ -34,9 +33,6 @@ export const HamburgerMenu = () => {
           <Line3 isOpen={isOpen} />
         </HamburgerLines>
         <MenuItems isOpen={isOpen}>
-          {/*<div>*/}
-          {/*  <Logo />*/}
-          {/*</div>*/}
           <CheckboxClose type='checkbox' checked={isOpen} onChange={toggleMenu} />
           <HamburgerClosedLines>
             <Line4 isOpen={isOpen} />

@@ -1,7 +1,10 @@
 'use client';
-
 import styled from 'styled-components';
 import { colors } from '@/common/styles';
+
+interface IBurgerMenuProps {
+  isOpen: boolean;
+}
 
 export const HeaderContainer = styled.div`
   width: 60px;
@@ -23,7 +26,7 @@ export const NavContainer = styled.nav`
   position: relative;
 `;
 
-export const MenuItems = styled.div<{ isOpen: boolean }>`
+export const MenuItems = styled.div<IBurgerMenuProps>`
   display: flex;
   list-style: none;
   padding-top: 120px;
@@ -36,7 +39,6 @@ export const MenuItems = styled.div<{ isOpen: boolean }>`
   top: ${(props) => (props.isOpen ? '-30px' : 'auto')};
   left: ${(props) => (props.isOpen ? '0' : '-300px')};
   z-index: ${(props) => (props.isOpen ? '99' : '1')};
-  // background-color: ${(props) => (props.isOpen ? colors.white100 : 'transparent')};
   background-color: ${({ theme }) => theme.body};
 `;
 
@@ -107,45 +109,45 @@ export const Line = styled.span`
   background: ${colors.pink};
 `;
 
-export const Line1 = styled(Line)<{ isOpen: boolean }>`
+export const Line1 = styled(Line)<IBurgerMenuProps>`
   transform-origin: -10px;
   transition: transform 0.4s ease-in-out;
-  transform: ${(props) => (props.isOpen ? 'rotate(45deg)' : 'none')};
+  transform: ${(props) => (props.isOpen ? 'rotate(45deg)' : undefined)};
 `;
 
-export const Line2 = styled(Line)<{ isOpen: boolean }>`
+export const Line2 = styled(Line)<IBurgerMenuProps>`
   transition: transform 0.2s ease-in-out;
-  transform: ${(props) => (props.isOpen ? 'scaleY(0)' : 'none')};
+  transform: ${(props) => (props.isOpen ? 'scaleY(0)' : undefined)};
 `;
 
-export const Line3 = styled(Line)<{ isOpen: boolean }>`
+export const Line3 = styled(Line)<IBurgerMenuProps>`
   transform-origin: -10px;
   transition: transform 0.4s ease-in-out;
-  transform: ${(props) => (props.isOpen ? 'rotate(-45deg)' : 'none')};
+  transform: ${(props) => (props.isOpen ? 'rotate(-45deg)' : undefined)};
 `;
 
-export const Line4 = styled(Line)<{ isOpen: boolean }>`
+export const Line4 = styled(Line)<IBurgerMenuProps>`
   margin-top: 9px;
   margin-left: 23px;
   transform-origin: -10px;
   transition: transform 0.4s ease-in-out;
-  transform: ${(props) => (props.isOpen ? 'rotate(45deg)' : 'none')};
+  transform: ${(props) => (props.isOpen ? 'rotate(45deg)' : undefined)};
 `;
 
-export const Line5 = styled(Line)<{ isOpen: boolean }>`
+export const Line5 = styled(Line)<IBurgerMenuProps>`
   transition: transform 0.2s ease-in-out;
-  transform: ${(props) => (props.isOpen ? 'scaleY(0)' : 'none')};
+  transform: ${(props) => (props.isOpen ? 'scaleY(0)' : undefined)};
 `;
 
-export const Line6 = styled(Line)<{ isOpen: boolean }>`
+export const Line6 = styled(Line)<IBurgerMenuProps>`
   margin-bottom: 18px;
   margin-left: 20px;
   transform-origin: 0;
   transition: transform 0.4s ease-in-out;
-  transform: ${(props) => (props.isOpen ? 'rotate(-45deg)' : 'none')};
+  transform: ${(props) => (props.isOpen ? 'rotate(-45deg)' : undefined)};
 `;
 
-export const Overlay = styled.div<{ isOpen: boolean }>`
+export const Overlay = styled.div<IBurgerMenuProps>`
   position: fixed;
   top: 0;
   left: 0;
