@@ -6,12 +6,12 @@ interface IBurgerMenuProps {
   $isOpen: boolean;
 }
 
-export const HeaderContainer = styled.div`
+export const BurgerWrapper = styled.div`
   width: 60px;
   height: 60px;
   z-index: 100;
   border-radius: 20px;
-  background-color: ${colors.white500};
+  background-color: ${(props) => props.theme.burger};
   position: relative;
 
   @media (min-width: 768px) {
@@ -56,7 +56,7 @@ export const Checkbox = styled.input`
   height: 32px;
   width: 32px;
   top: 15px;
-  left: 15px;
+  left: 13px;
   z-index: 5;
   opacity: 0;
   cursor: pointer;
@@ -76,7 +76,7 @@ export const HamburgerLines = styled.div`
 export const HamburgerClosedLines = styled.div`
   height: 60px;
   width: 60px;
-  background-color: ${colors.white500};
+  background-color: ${(props) => props.theme.burger};
   border-radius: 20px;
   position: absolute;
   top: 55px;

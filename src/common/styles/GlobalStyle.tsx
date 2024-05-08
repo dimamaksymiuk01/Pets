@@ -19,6 +19,7 @@ export const darkTheme: DefaultTheme = {
   btnHomeHover: colors.white200,
   btnHomeActive: colors.pink,
   poster: colors.black100,
+  burger: colors.black100,
 };
 
 export const lightTheme: DefaultTheme = {
@@ -30,6 +31,7 @@ export const lightTheme: DefaultTheme = {
   btnHomeHover: colors.white200,
   btnHomeActive: colors.pink,
   poster: colors.white200,
+  burger: colors.white500,
 };
 
 export const GlobalStyle = createGlobalStyle<IGlobalStyleProps>`

@@ -7,40 +7,35 @@ import {
   CheckboxClose,
   HamburgerClosedLines,
   HamburgerLines,
-  HeaderContainer,
-  Line1,
-  Line2,
-  Line3,
-  Line4,
-  Line5,
-  Line6,
+  BurgerWrapper,
   MenuItems,
   NavContainer,
   Overlay,
 } from './BurgerMenu.styled';
-import { LinksGroup } from '@/common/components/LinksGroup';
+import { LinksGroup } from '@/common/components/LinksGroup/LinksGroup';
 
 /* instruments */
 import { useMenu } from '@/common/hooks';
+import { closedLines, openLines } from './BurgerData';
 
 export const BurgerMenu = () => {
   const { isOpen, toggleMenu } = useMenu();
 
   return (
-    <HeaderContainer>
+    <BurgerWrapper>
       <NavContainer>
         <Checkbox type='checkbox' checked={isOpen} onChange={toggleMenu} />
         <HamburgerLines>
-          <Line1 $isOpen={isOpen} />
-          <Line2 $isOpen={isOpen} />
-          <Line3 $isOpen={isOpen} />
+          {openLines.map(({ Component, id }) => (
+            <Component key={id} $isOpen={isOpen} />
+          ))}
         </HamburgerLines>
         <MenuItems $isOpen={isOpen}>
           <CheckboxClose type='checkbox' checked={isOpen} onChange={toggleMenu} />
           <HamburgerClosedLines>
-            <Line4 $isOpen={isOpen} />
-            <Line5 $isOpen={isOpen} />
-            <Line6 $isOpen={isOpen} />
+            {closedLines.map(({ Component, id }) => (
+              <Component key={id} $isOpen={isOpen} />
+            ))}
           </HamburgerClosedLines>
           <BurgerContainer>
             <LinksGroup />
@@ -48,6 +43,6 @@ export const BurgerMenu = () => {
         </MenuItems>
         <Overlay $isOpen={isOpen} />
       </NavContainer>
-    </HeaderContainer>
+    </BurgerWrapper>
   );
 };
