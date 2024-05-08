@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { colors } from '@/common/styles';
 
 interface IBurgerMenuProps {
-  isOpen: boolean;
+  $isOpen: boolean;
 }
 
 export const HeaderContainer = styled.div`
@@ -30,15 +30,15 @@ export const MenuItems = styled.div<IBurgerMenuProps>`
   display: flex;
   list-style: none;
   padding-top: 120px;
-  height: ${(props) => (props.isOpen ? '100vh' : 'auto')};
-  width: ${(props) => (props.isOpen ? '100vw' : 'auto')};
-  transform: ${(props) => (props.isOpen ? 'translateX(0)' : 'translate(-150%)')};
+  height: ${(props) => (props.$isOpen ? '100vh' : 'auto')};
+  width: ${(props) => (props.$isOpen ? '100vw' : 'auto')};
+  transform: ${(props) => (props.$isOpen ? 'translateX(0)' : 'translate(-150%)')};
   flex-direction: column;
   transition: transform 0.5s ease-in-out;
-  position: ${(props) => (props.isOpen ? 'fixed' : 'relative')};
-  top: ${(props) => (props.isOpen ? '-30px' : 'auto')};
-  left: ${(props) => (props.isOpen ? '0' : '-300px')};
-  z-index: ${(props) => (props.isOpen ? '99' : '1')};
+  position: ${(props) => (props.$isOpen ? 'fixed' : 'relative')};
+  top: ${(props) => (props.$isOpen ? '-30px' : 'auto')};
+  left: ${(props) => (props.$isOpen ? '0' : '-300px')};
+  z-index: ${(props) => (props.$isOpen ? '99' : '1')};
   background-color: ${({ theme }) => theme.body};
 `;
 
@@ -101,7 +101,7 @@ export const CheckboxClose = styled.input`
   color: black;
 `;
 
-export const Line = styled.span`
+export const Line = styled.div<IBurgerMenuProps>`
   display: block;
   height: 4px;
   width: 30px;
@@ -112,39 +112,39 @@ export const Line = styled.span`
 export const Line1 = styled(Line)<IBurgerMenuProps>`
   transform-origin: -10px;
   transition: transform 0.4s ease-in-out;
-  transform: ${(props) => (props.isOpen ? 'rotate(45deg)' : undefined)};
+  transform: ${(props) => (props.$isOpen ? 'rotate(45deg)' : undefined)};
 `;
 
-export const Line2 = styled(Line)<IBurgerMenuProps>`
+export const Line2 = styled(Line)`
   transition: transform 0.2s ease-in-out;
-  transform: ${(props) => (props.isOpen ? 'scaleY(0)' : undefined)};
+  transform: ${(props) => (props.$isOpen ? 'scaleY(0)' : undefined)};
 `;
 
-export const Line3 = styled(Line)<IBurgerMenuProps>`
+export const Line3 = styled(Line)`
   transform-origin: -10px;
   transition: transform 0.4s ease-in-out;
-  transform: ${(props) => (props.isOpen ? 'rotate(-45deg)' : undefined)};
+  transform: ${(props) => (props.$isOpen ? 'rotate(-45deg)' : undefined)};
 `;
 
-export const Line4 = styled(Line)<IBurgerMenuProps>`
+export const Line4 = styled(Line)`
   margin-top: 9px;
   margin-left: 23px;
   transform-origin: -10px;
   transition: transform 0.4s ease-in-out;
-  transform: ${(props) => (props.isOpen ? 'rotate(45deg)' : undefined)};
+  transform: ${(props) => (props.$isOpen ? 'rotate(45deg)' : undefined)};
 `;
 
-export const Line5 = styled(Line)<IBurgerMenuProps>`
+export const Line5 = styled(Line)`
   transition: transform 0.2s ease-in-out;
-  transform: ${(props) => (props.isOpen ? 'scaleY(0)' : undefined)};
+  transform: ${(props) => (props.$isOpen ? 'scaleY(0)' : undefined)};
 `;
 
-export const Line6 = styled(Line)<IBurgerMenuProps>`
+export const Line6 = styled(Line)`
   margin-bottom: 18px;
   margin-left: 20px;
   transform-origin: 0;
   transition: transform 0.4s ease-in-out;
-  transform: ${(props) => (props.isOpen ? 'rotate(-45deg)' : undefined)};
+  transform: ${(props) => (props.$isOpen ? 'rotate(-45deg)' : undefined)};
 `;
 
 export const Overlay = styled.div<IBurgerMenuProps>`
@@ -154,8 +154,8 @@ export const Overlay = styled.div<IBurgerMenuProps>`
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: ${(props) => (props.isOpen ? '98' : '-1')};
-  visibility: ${(props) => (props.isOpen ? 'visible' : 'hidden')};
-  opacity: ${(props) => (props.isOpen ? '1' : '0')};
+  z-index: ${(props) => (props.$isOpen ? '98' : '-1')};
+  visibility: ${(props) => (props.$isOpen ? 'visible' : 'hidden')};
+  opacity: ${(props) => (props.$isOpen ? '1' : '0')};
   transition: opacity 0.5s ease-in-out;
 `;

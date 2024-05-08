@@ -28,22 +28,22 @@ export const HamburgerMenu = () => {
       <NavContainer>
         <Checkbox type='checkbox' checked={isOpen} onChange={toggleMenu} />
         <HamburgerLines>
-          <Line1 isOpen={isOpen} />
-          <Line2 isOpen={isOpen} />
-          <Line3 isOpen={isOpen} />
+          <Line1 $isOpen={isOpen} />
+          <Line2 $isOpen={isOpen} />
+          <Line3 $isOpen={isOpen} />
         </HamburgerLines>
-        <MenuItems isOpen={isOpen}>
+        <MenuItems $isOpen={isOpen}>
           <CheckboxClose type='checkbox' checked={isOpen} onChange={toggleMenu} />
           <HamburgerClosedLines>
-            <Line4 isOpen={isOpen} />
-            <Line5 isOpen={isOpen} />
-            <Line6 isOpen={isOpen} />
+            <Line4 $isOpen={isOpen} />
+            <Line5 $isOpen={isOpen} />
+            <Line6 $isOpen={isOpen} />
           </HamburgerClosedLines>
           <BurgerContainer>
             <LinksGroup />
           </BurgerContainer>
         </MenuItems>
-        <Overlay isOpen={isOpen} />
+        <Overlay $isOpen={isOpen} />
       </NavContainer>
     </HeaderContainer>
   );
