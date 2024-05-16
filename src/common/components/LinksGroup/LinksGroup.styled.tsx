@@ -14,11 +14,18 @@ const insideCard = `
   border: 4px solid;
   width: 138px;
   height: 198px;
+  @media (max-width: 425px) {
+      display: none;
+    }
 `;
+
 export const CardWithButtonContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media (max-width: 425px) {
+    width: 100%;
+  }
 `;
 
 export const LinksCardContainer = styled.div`
@@ -28,6 +35,17 @@ export const LinksCardContainer = styled.div`
   align-items: center;
   flex-wrap: wrap;
   gap: 16px;
+  @media (max-width: 425px) {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    justify-content: center;
+    justify-items: center;
+    a {
+      width: 100%;
+    }
+  }
 `;
 
 export const VotingCard = styled.div`
@@ -51,7 +69,8 @@ export const GalleryCard = styled.div`
 export const StyledButton = styled.button`
   background-color: ${(props) => props.theme.btnHome};
   color: ${colors.pink};
-  width: 146px;
+  width: 100%;
+  min-width: 146px;
   height: 36px;
   border: none;
   border-radius: 10px;

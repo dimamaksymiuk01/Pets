@@ -1,19 +1,14 @@
 /* components */
-import { ThemeSwitch } from '@/common/components';
-import { CustomLink, HeaderContainer, LogoContainer } from './Header.styled';
-import Logo from '@/public/icons/logo.svg';
+import { ThemeSwitch, Logo } from '@/common/components';
+import { HeaderContainer, LeftBar } from './Header.styled';
 
 /* instruments */
-import { ROUTES_ENUM } from '@/common/enums';
 
 export const Header = () => (
   <HeaderContainer>
-    <CustomLink href={ROUTES_ENUM.HOME}>
-      <LogoContainer>
-        <Logo />
-        <span>PetsPaw</span>
-      </LogoContainer>
-    </CustomLink>
+    <LeftBar>
+      <Logo />
+    </LeftBar>
     <ThemeSwitch />
   </HeaderContainer>
 );
