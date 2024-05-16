@@ -8,13 +8,11 @@ import { usePage } from '@/common/hooks';
 
 export const NavMenu = () => {
   const { isPage, togglePage } = usePage();
-  const dd = true;
-
   return (
     <NavMenuContainer>
-      <Header />
-      {dd && (
+      {isPage && (
         <>
+          <Header />
           <NavMenuText />
           <LinksGroup />
         </>

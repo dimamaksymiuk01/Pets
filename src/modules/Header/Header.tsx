@@ -1,5 +1,5 @@
 /* components */
-import { ThemeSwitch, Logo, BurgerMenu } from '@/common/components';
+import { ThemeSwitch, Logo } from '@/common/components';
 import { HeaderContainer, LeftBar } from './Header.styled';
 
 /* instruments */
@@ -7,7 +7,6 @@ import { HeaderContainer, LeftBar } from './Header.styled';
 export const Header = () => (
   <HeaderContainer>
     <LeftBar>
-      <BurgerMenu />
       <Logo />
     </LeftBar>
     <ThemeSwitch />

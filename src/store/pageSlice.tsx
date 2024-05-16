@@ -7,7 +7,7 @@ interface IPageState {
 }
 
 const initialState: IPageState = {
-  isPage: false,
+  isPage: true,
 };
 
 const pageSlice = createSlice({

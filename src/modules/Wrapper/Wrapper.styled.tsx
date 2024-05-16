@@ -21,4 +21,10 @@ export const WrapperStyled = styled.div`
     justify-content: center;
     width: 100%;
   }
+
+  @media (max-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
 `;

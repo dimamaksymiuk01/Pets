@@ -18,6 +18,9 @@ import { usePage } from '@/common/hooks';
 export const LinksGroup = () => {
   const { isPage, togglePage } = usePage();
 
+  // const handleButtonClick = () => {
+  //   togglePage();
+  // };
   return (
     <LinksCardContainer>
       {linksData.map(({ card: Component, id, href, label, src, width, height, alt }) => (
